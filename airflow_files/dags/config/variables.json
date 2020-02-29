@@ -1,0 +1,14 @@
+{
+    "flight_directions": [
+        {
+            "arrivalCode": "OVB",
+            "carrierCode": "SU",
+            "departureCode": "SVO"
+        },
+        {
+            "arrivalCode": "OVB",
+            "carrierCode": "S7",
+            "departureCode": "VKO"
+        }
+    ]
+}
