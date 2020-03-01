@@ -10,5 +10,10 @@
             "carrierCode": "S7",
             "departureCode": "VKO"
         }
-    ]
+    ],
+    "app_id": "737dc1c8",
+    "app_key": "1c55666b3bc10780adb08c1269762627",
+    "url_schedule": "https://api.flightstats.com/flex/schedules/rest/v1/json/from/%s/to/%s/departing/%s?appId=%s&appKey=%s",
+    "url_flight_features": "https://api.flightstats.com/flex/flightFeatures/rest/v1/json/flight/%s/%s/dep/%s?appId=%s&appKey=%s",
+    "url_flight_history": "https://api.flightstats.com/flex/flightstatus/historical/rest/v3/json/route/status/%s/%s/dep/%s?appId=%s&appKey=%s"
 }
