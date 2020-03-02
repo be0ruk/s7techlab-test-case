@@ -51,7 +51,7 @@ def flight_upload(departureCode, arrivalCode, carrierCode, ds, **kwargs):
     conn = pg_hook.get_conn()
     cur = conn.cursor()
 
-    for i in range(1):
+    for i in range(7):
         date += timedelta(days=1)
         url = url_flight_history if (datetime.now() - date).days > 0 else url_schedule
         url = url % (departureCode, arrivalCode, date.strftime('%Y/%m/%d'), app_id, app_key)
@@ -91,6 +91,7 @@ def flight_upload(departureCode, arrivalCode, carrierCode, ds, **kwargs):
     airports = r["appendix"]["airports"]
     cur.executemany(airports_insert, airports)
     conn.commit()
+    conn.close()
 
 
 directions = json.loads(Variable.get('flight_directions'))
